@@ -10,7 +10,7 @@ This is a landing site to start giving back intiative. PUCSD Alumni of Batch'94 
 
 ### Mentorship Programme 
 We believe with a little help and guidance many students will achievelot more. We had support of our seniors who guided us. We offer mentorship programme to help those who feel they can talk to someone.
-Goto [Mentorship_Programme](https://kiranmak.github.io/pages/mentorship.html).
+Goto [Mentorship_Programme](https://kiranmak.github.io/landingpage/pages/mentorship.html).
 
 
 ### Industry Sessions
