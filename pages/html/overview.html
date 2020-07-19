@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Overview of GitHub Pages</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="assets/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/pilcrow.css" />
+    <link type="text/css" rel="stylesheet" href="assets/hljs-github.min.css"/>
+  </head>
+<body><p>The present site is simple, with a style derived from
+<a href="https://jekyllbootstrap.com/">JekyllBootstrap</a> and
+<a href="https://getbootstrap.com">Twitter Bootstrap</a> with a particular
+theme. I&#39;ll explain how to create a site with exactly this style. If
+you want something else, try the
+<a href="https://pages.github.com">GitHub Pages</a> automatic site generator, or
+look at the <a href="pages/resources.html">resources page</a>.</p>
+<p>These GitHub Pages sites are constructed by having a <code>gh-pages</code> branch
+of a GitHub repository, with specific files layed out in a specific
+way. To see the structure of such a repository, look at the
+<a href="https://github.com/kbroman/simple_site">repository for the present site</a>.</p>
+<pre class="hljs"><code>_includes/
+_layouts/
+_plugins/
+assets/
+pages/
+<span class="hljs-selector-class">.gitignore</span>
+License<span class="hljs-selector-class">.md</span>
+Rakefile
+ReadMe<span class="hljs-selector-class">.md</span>
+_config<span class="hljs-selector-class">.yml</span>
+index.md</code></pre><p>The directories beginning with an underscore contain materials
+defining the basic layout and style for the site. If you
+<a href="pages/local_test.html">build the site locally</a> (for testing
+purposes), there will also be a <code>_site/</code> directory containing the
+actual site (with
+<a href="https://daringfireball.net/projects/markdown/">Markdown</a> files
+converted to html). You don&#39;t want the <code>_site/</code> directory in your
+repository, so include that in the <code>.gitignore</code> file.</p>
+<p>The
+<a href="https://github.com/kbroman/simple_site/tree/gh-pages/assets"><code>assets/</code></a>
+directory contains any non-Markdown materials for the site (e.g.,
+images or example code). These files won&#39;t be touched in the
+conversion but will be just copied over as-is.</p>
+<p>The
+<a href="https://github.com/kbroman/simple_site/tree/gh-pages/pages"><code>pages/</code></a>
+directory contains
+<a href="https://daringfireball.net/projects/markdown/">Markdown</a> files that
+will become html pages on your site.</p>
+<p>The
+<a href="https://github.com/kbroman/simple_site/blob/gh-pages/_config.yml"><code>_config.yml</code></a>
+file contains all sorts of configuration parameters (some of which
+you&#39;ll need to modify). The <a href="https://github.com/kbroman/simple_site/blob/gh-pages/Rakefile"><code>Rakefile</code></a> contains instructions for
+the conversion; you won&#39;t modify this file.</p>
+<p>It&#39;s best to always include
+<a href="https://github.com/kbroman/simple_site/tree/gh-pages/License.md"><code>License.md</code></a>
+and
+<a href="https://github.com/kbroman/simple_site/tree/gh-pages/ReadMe.md"><code>ReadMe.md</code></a>
+files. But you wouldn&#39;t need these to be placed on the website; they&#39;d
+just be viewed in the repository on <a href="https://github.com">GitHub</a>. The
+<a href="https://github.com/kbroman/simple_site/tree/gh-pages/_config.yml"><code>_config.yml</code></a>
+file contains
+<a href="https://github.com/kbroman/simple_site/blob/gh-pages/_config.yml#L5">a line sort of like the following</a>
+(but listing a few more files), indicating files to <em>not</em> move to the
+final site.</p>
+<pre class="hljs"><code><span class="hljs-symbol">exclude:</span> [<span class="hljs-string">"ReadMe.md"</span>, <span class="hljs-string">"Rakefile"</span>, <span class="hljs-string">"License.md"</span>]</code></pre><p>Finally,
+<a href="https://raw.githubusercontent.com/kbroman/simple_site/gh-pages/index.md"><code>index.md</code></a>
+is the Markdown version of the main page for your site.</p>
+<p>The
+<a href="https://raw.githubusercontent.com/kbroman/simple_site/gh-pages/index.md"><code>index.md</code></a>
+file and the Markdown files in
+<a href="https://github.com/kbroman/simple_site/blob/gh-pages/pages"><code>pages/</code></a>
+(e.g.,
+<a href="https://raw.githubusercontent.com/kbroman/simple_site/gh-pages/pages/overview.md">the present page</a>)
+have a header with a particular form:</p>
+<pre class="hljs"><code><span class="hljs-meta">---</span>
+<span class="hljs-attr">layout:</span> page
+<span class="hljs-attr">title:</span> simple site
+<span class="hljs-attr">tagline:</span> Easy websites with GitHub Pages
+<span class="hljs-attr">description:</span> Minimal tutorial on making a simple website with GitHub Pages
+<span class="hljs-meta">---</span></code></pre><p>In the conversion of the site from Markdown to html, this bit says
+that the current file is to be converted with the &ldquo;page&rdquo;
+layout, and gives the title and the (optional) &ldquo;tagline.&rdquo;
+The &quot;<code>description:</code>&quot; part gets converted into
+<code>&lt;meta name=&quot;description&quot; content=&quot;Minimal tutorial on...&quot;&gt;</code>
+which, in principle, may be used in the results of google searches.</p>
+<p>The rest is basically plain Markdown, though the present site is
+configured to use <a href="https://kramdown.gettalong.org/">kramdown</a> as the
+Markdown converter (via
+<a href="https://github.com/kbroman/simple_site/blob/gh-pages/_config.yml#L23">this line in the <code>_config.yml</code> file</a>).
+Read about the <a href="https://kramdown.gettalong.org/syntax.html">kramdown syntax</a>
+or just look at the
+<a href="https://kramdown.gettalong.org/quickref.html">quick reference</a>.</p>
+<p>Now go to the page about <a href="independent_site.html">how to make an independent website</a>.</p>
+</body>
+</html>
